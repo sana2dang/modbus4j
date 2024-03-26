@@ -120,7 +120,16 @@ class WaitingRoom {
             // Check if there is a response object now.
             if (response != null)
                 return response;
-
+            try{
+                int tnmWait = 60;
+                System.out.println("modbus-tnmtech.. wait(" + tnmWait + " ms) ");
+                wait(tnmWait);
+                Gpio.digitalWrite(20, Gpio.LOW);
+            }
+            catch ( InterruptedException e ) {
+                // ...
+            }
+                
             // If not, wait the timeout and then check again.
             waitNoThrow(timeout);
             return response;
