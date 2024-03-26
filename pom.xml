@@ -87,6 +87,11 @@
             <artifactId>commons-logging</artifactId>
             <version>1.1.1</version>
         </dependency>
+    	<dependency>
+	    <groupId>com.pi4j</groupId>
+	    <artifactId>pi4j-core</artifactId>
+    	    <version>1.2</version>
+	</dependency>
     </dependencies>
     <issueManagement>
         <url>https://github.com/infiniteautomation/modbus4j/issues</url>
